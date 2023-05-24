@@ -48,12 +48,12 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
-ssize_t getstdin(char **lineptr, int file);
-char  *clean_line(char *content);
+ssize_t getstdin(char **lineptr, int doc);
+char  *clean_line(char *cont);
 void our_push(stack_t **head, unsigned int number);
 void our_pall(stack_t **head, unsigned int number);
 void our_pint(stack_t **head, unsigned int number);
-int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
+int execute(char *cont, stack_t **head, unsigned int counter, FILE *doc);
 void free_stack(stack_t *head);
 void our_pop(stack_t **head, unsigned int counter);
 void our_swap(stack_t **head, unsigned int counter);
