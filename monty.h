@@ -21,12 +21,11 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 /**
- * struct bus_s - variables -args, file, line content
- * @arg: value
- * @file: pointer to monty file
- * @content: line content
- * @lifi: flag change stack <-> queue
- * Description: carries values through the program
+ * struct tax_s: variables -args, file, line content
+ * @argu: value
+ * @doc: pointer to monty file
+ * @cont: line content
+ * @li: flag change stack <-> queue
  */
 typedef struct tax_s
 {
