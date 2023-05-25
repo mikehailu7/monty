@@ -7,9 +7,9 @@
  */
 void our_push(stack_t **head, unsigned int counter)
 {
-      int a;
-      int fla = 0;
-      int k = 0;
+      int a,
+      fla = 0,
+      k = 0;
 
 	if (tax.argu)
 	{

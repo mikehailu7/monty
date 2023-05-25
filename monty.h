@@ -25,14 +25,14 @@ typedef struct stack_s
  * @argu: value
  * @doc: pointer to monty file
  * @cont: line content
- * @li: flag change stack <-> queue
+ * @li: This will change stack to q.
  */
 typedef struct tax_s
 {
+	char *argu;
 	FILE *doc;
 	char *cont;
 	int li;
-	char *argu;
 }  tax_t;
 extern tax_t tax;
 /*
