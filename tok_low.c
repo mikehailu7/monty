@@ -46,7 +46,7 @@ char **struct_tow(char *str, char *delims)
 			while (z >= 0)
 			{
 				z--;
-				free(words[i]);
+				free(words[z]);
 			}
 			free(words);
 			return (NULL);
@@ -102,7 +102,7 @@ int dis_get_word_length(char *str, char *delims)
 	    pend = 1,
 	    z = 0;
 
-	while (*(str + i))
+	while (*(str + z))
 	{
 		if (dis_is_delim(str[z], delims))
 			pend = 1;
