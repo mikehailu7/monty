@@ -20,7 +20,7 @@ void dist_set_op_tok_error(int error_code)
 	}
 	while (k < token_leng)
 	{
-		new_toks[k] = op_toks[i];
+		new_toks[k] = op_toks[k];
 		k++;
 	}
 	exit_str = conv_string(error_code);
@@ -31,7 +31,7 @@ void dist_set_op_tok_error(int error_code)
 		return;
 	}
 	new_toks[k++] = exit_str;
-	new_toks[] = NULL;
+	new_toks[k] = NULL;
 	free(op_toks);
 	op_toks = new_toks;
 }

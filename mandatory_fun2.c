@@ -58,3 +58,4 @@ void our_monty_sum(stack_t **stack, unsigned int line_number)
 
 	(*stack)->next->next->n += (*stack)->next->n;
 	our_monty_pop(stack, line_number);
+}

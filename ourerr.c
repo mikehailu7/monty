@@ -3,7 +3,7 @@
 int dist_usage_error(void);
 int dist_malloc_error(void);
 int dist_f_open_error(char *filename);
-int dist_ unknown_op_error(char *opcode, unsigned int line_number);
+int dist_unknown_op_error(char *opcode, unsigned int line_number);
 int no_int_error(unsigned int line_number);
 
 /**
@@ -47,7 +47,7 @@ int dist_f_open_error(char *filename)
  * Author: Mikiashailu and Abdiali.
  * Return: return exit if the code is correct.
  */
-int dist_ unknown_op_error(char *opcode, unsigned int line_number)
+int dist_unknown_op_error(char *opcode, unsigned int line_number)
 {
 	fprintf(stderr, "L%u: unknown instruction %s\n",
 			line_number, opcode);

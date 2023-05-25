@@ -33,14 +33,13 @@ void our_monty_pall(stack_t **stack, unsigned int line_number)
 void our_monty_push(stack_t **stack, unsigned int line_number)
 {
 	int m;
-	stack_t *tmpo, *newl;
+	stack_t *tmpo, *new;
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
 		dist_set_op_tok_error(dist_malloc_error());
 		return;
 	}
-
 
 	if (op_toks[1] == NULL)
 	{
@@ -68,8 +67,8 @@ void our_monty_push(stack_t **stack, unsigned int line_number)
 		new->prev = *stack;
 		new->next = tmpo;
 		if (tmpo)
-			tmpo->prev = newl;
-		(*stack)->next = newl;
+			tmpo->prev = new;
+		(*stack)->next = new;
 	}
 	else
 	{
@@ -78,7 +77,7 @@ void our_monty_push(stack_t **stack, unsigned int line_number)
 			tmpo = tmpo->next;
 		new->prev = tmpo;
 		new->next = NULL;
-		tmp->next = newl;
+		tmpo->next = new;
 	}
 }
 

@@ -67,14 +67,14 @@ int dist_run_monty(FILE *script_fd)
 {
 	stack_t *stack = NULL;
 	char *line = NULL;
-	exit_status = EXIT_SUCCESS;
-	size_t leng = 0, unsigned int lin_num = 0, prev_tok_len = 0;
+	size_t len = 0, exit_status = EXIT_SUCCESS;
+	unsigned int lin_num = 0, prev_tok_len = 0;
 	void (*op_func)(stack_t**, unsigned int);
 
 	if (dist_init_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 
-	while (getline(&line, &leng, script_fd) != -1)
+	while (getline(&line, &len, script_fd) != -1)
 	{
 		lin_num++;
 		op_toks = strtow(line, DELIMS);
@@ -139,8 +139,6 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 		{"swap", our_monty_swap},
 		{"add", our_monty_sum},
 		{"nop", our_monty_nop},
-		{"pchar", monty_pchar},
-		{"pstr", monty_pstr},
 		{NULL, NULL}
 	};
 	int z;
@@ -154,4 +152,3 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 
 	return (NULL);
 }
-

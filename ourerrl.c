@@ -1,11 +1,9 @@
 #include "monty.h"
 
-
 int short_stack_error(unsigned int line_number, char *op);
 int dist_div_error(unsigned int line_number);
 int dist_pop_error(unsigned int line_number);
-int dist_div_error(unsigned int line_number);
-int dist_pop_error(unsigned int line_number, char *message);
+int pchar_error(unsigned int line_number, char *message);
 
 /**
  * dist_dist_pop_error: This funciton will Print pop error messages for empty stacks.

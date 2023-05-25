@@ -57,7 +57,7 @@ char *conv_string(int num)
 
 	fill_buffer_with_base(tempo, 10, our_ret, size);
 	if (num < 0 || number_0 < 0)
-		ret[0] = '-';
+		our_ret[0] = '-';
 
 
 	return (our_ret);
