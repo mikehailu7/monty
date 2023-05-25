@@ -64,7 +64,6 @@ int dist_malloc_error(void);
 int dist_f_open_error(char *filename);
 int dist_ unknown_op_error(char *opcode, unsigned int line_number);
 int no_int_error(unsigned int line_number);
-int dist_pop_error(unsigned int line_number);
 int pint_error(unsigned int line_number);
 int short_stack_error(unsigned int line_number, char *op);
 int dist_div_error(unsigned int line_number);
